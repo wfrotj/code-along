@@ -1,0 +1,213 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     
+    
+}
+.grid-container {
+     display: grid;
+     grid-template-rows: 1fr .5fr 8fr .5fr;
+     grid-template-columns: 2fr 8fr;
+     width: 100vw;
+     height: 100vh;
+     gap: 5px;
+     
+}
+header{
+     border: 1px solid red;
+     grid-row: 1 / 2;
+     grid-column: 1 / 4;
+     background-color: red;
+}
+aside {
+     grid-row: 2 / 4;
+     grid-column: 1 / 2;
+     
+}
+.featured {
+     grid-row: 2 / 3;
+     grid-column: 2 / 4;
+     background-color: aqua;
+}
+#content{
+     grid-row: 3 / 4;
+     grid-column: 2 / 4;
+     background-color: orangered;
+}
+footer {
+     grid-row: 4 / 4;
+     grid-column: 1 / 4;
+     background-color: black;
+
+}
+header {
+     padding: 10px 0px;
+}
+nav h1 {
+     padding-left: 0;
+}
+
+aside {
+     display: flex;
+     flex-direction: column;
+     padding: 10px;
+    
+   }
+
+aside div {
+     justify-content: space-between;
+     align-items: center;
+     display: flex;
+     flex: 1;
+     border-radius: 10px;
+     padding: 0 0;
+     margin: 0;
+}
+aside div img {
+     width: 100px;
+     height: 100px;
+     justify-content: center;
+     border: 1px solid black;
+} 
+
+nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin: 0 40px;
+}
+nav div {
+     position: relative;
+     left: 200px;
+}
+nav div .search-bar {
+     border: 0px solid rgba(0, 0, 0lue, .1);
+     width: 350px;
+     height: 20px;
+}
+
+
+.options {
+     display: flex;
+     list-style: none;
+     gap: 40px;
+}
+.main-logo {
+     font-size: 35px;
+}
+.featured {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     height: 100%;
+}
+footer {
+     color:white;
+}
+main {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 10px;
+     padding:10px;
+}
+main div {
+     background-color: white;
+     padding: 10px;
+}
+.gg-log-in {
+     box-sizing: border-box;
+     position: relative;
+     display: block;
+     transform: scale(var(--ggs,1));
+     width: 6px;
+     height: 16px;
+     border: 2px solid;
+     border-left: 0;
+     border-top-right-radius: 2px;
+     border-bottom-right-radius: 2px;
+     margin-right: -10px
+    }
+    
+.gg-profile,
+.gg-profile::after,
+.gg-profile::before {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 100px;
+    
+
+}
+.gg-profile {
+    overflow: hidden;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+}
+.gg-profile::after,
+.gg-profile::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+}
+.gg-profile::after {
+    border-radius: 200px;
+    top: 11px;
+    left: 0px;
+    width: 18px;
+    height: 18px;
+}
+.gg-shopping-cart {
+     display: block;
+     box-sizing: border-box;
+     position: relative;
+     transform: scale(var(--ggs,1));
+     width: 20px;
+     height: 21px;
+     background:
+         linear-gradient(
+             to left,currentColor 12px,
+             transparent 0)
+             no-repeat -1px 6px/18px 2px,
+         linear-gradient(
+             to left,currentColor 12px,
+             transparent 0)
+             no-repeat 6px 14px/11px 2px,
+         linear-gradient(
+             to left,currentColor 12px,
+             transparent 0)
+             no-repeat 0 2px/4px 2px,
+         radial-gradient(
+             circle,currentColor 60%,
+             transparent 40%)
+             no-repeat 12px 17px/4px 4px,
+         radial-gradient(
+             circle,currentColor 60%,
+             transparent 40%)
+             no-repeat 6px 17px/4px 4px
+ }
+ .gg-shopping-cart::after,
+ .gg-shopping-cart::before {
+     content: "";
+     display: block;
+     position: absolute;
+     box-sizing: border-box;
+     width: 2px;
+     height: 14px;
+     background: currentColor;
+     top: 2px;
+     left: 4px;
+     transform: skew(12deg)
+ }
+ .gg-shopping-cart::after {
+     height: 10px;
+     top: 6px;
+     left: 16px;
+     transform: skew(-12deg)
+ }
